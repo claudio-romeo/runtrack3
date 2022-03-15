@@ -7,8 +7,7 @@
     <title>Document</title>
     <script src="script.js" defer></script>
 </head>
-<body onload="MaBoite();">
-<div id="zonesaisie"></div>
+<body>
     
 </body>
 </html>

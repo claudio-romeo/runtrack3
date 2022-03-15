@@ -1,31 +1,46 @@
 'use strict';
 
-function MaBoite()
-{
-let condition=false;
-do 
-{
-    let annee =prompt("entrer une date sous forme de YYYY:")
-    if((isNaN(annee) === true) || (annee.length!=4) || (annee.length<=0))
-    {
+function jourtravaille(date)
 
-    }else 
-    {
-        condition=true;
-        Estbissextile(annee);
-    }
-    
-}while(condition===false);
-}
-
-function Estbissextile(annee)
 {
-    if((annee % 4 === 0 && annee % 100 > 0) || (annee % 400 === 0))
-    {
-         document.getElementById('zonesaisie').innerHTML="<p style='color:green;'>L'année "+annee+ " : est une année bissextile </p>";
-    }else 
-    {
+    const Jferie = 
+    [
+        "2020-01-01",
+        "2020-04-13",
+        "2020-05-01",
+        "2020-05-08",
+        "2020-05-21",
+        "2020-06-01",
+        "2020-07-14",
+        "2020-08-15",
+        "2020-11-01",
+        "2020-11-11",
+        "2020-12-25",
         
-        document.getElementById('zonesaisie').innerHTML="<p style='color:green;'>L'année "+annee+ " : n'est pas une année bissextile </p>";
+    ];
+
+
+
+    var date = new Date(dates);
+
+
+    const option = { weekday: 'long' , year:'numeric' , month:'long' , day:'numeric' }
+    var dateAffiche = date.toLocaleDateString('fr-FR', option)
+
+
+    if (jourFerie.includes(dates) == true) {
+        
+            console.log("Le " + dateAffiche + " est un jour ferié")
+    }
+
+
+    else if (date.getDay() == 0 || date.getDay() == 6) {
+
+        console.log("Le " + dateAffiche + " est le week-end")
+    }
+    else {
+        console.log("Le " + dateAffiche + " il faut travailler")
     }
 }
+        
+    jourtravaille("2020-12-25")

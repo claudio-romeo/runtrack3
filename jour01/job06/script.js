@@ -1,31 +1,21 @@
 'use strict';
 
-function MaBoite()
-{
-let condition=false;
-do 
-{
-    let annee =prompt("entrer une date sous forme de YYYY:")
-    if((isNaN(annee) === true) || (annee.length!=4) || (annee.length<=0))
-    {
+function fizzBuzz(){
 
-    }else 
-    {
-        condition=true;
-        Estbissextile(annee);
-    }
-    
-}while(condition===false);
-}
-
-function Estbissextile(annee)
-{
-    if((annee % 4 === 0 && annee % 100 > 0) || (annee % 400 === 0))
-    {
-         document.getElementById('zonesaisie').innerHTML="<p style='color:green;'>L'année "+annee+ " : est une année bissextile </p>";
-    }else 
-    {
+    for(let i = 1 ;i <= 151 ; i++){
         
-        document.getElementById('zonesaisie').innerHTML="<p style='color:green;'>L'année "+annee+ " : n'est pas une année bissextile </p>";
+    if(i % 3 == 0){
+        console.log("Fizz") 
+    }
+    if(i % 5 == 0){
+        console.log("Buzz")
+    }
+    if(i % 3 == 0 && i % 5 == 0){
+        console.log("FizzBuzz")
+    } else {
+        console.log(i)
     }
 }
+
+}
+fizzBuzz()
