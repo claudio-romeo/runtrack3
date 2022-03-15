@@ -1,14 +1,25 @@
 'use strict';
 
-var bouton = document.querySelector('button');
-var article = document.querySelector('citation');
+document.addEventListener('DOMContentLoaded', function loaded()
 
-bouton.addEventListener('click', () =>{
-    if(article.style.display === 'none'){
-        article.style.display = 'block';
 
-    }else {
-        article.style.display === 'none';
+{
+    var article = document.querySelector('article');
+
+
+    article.style.display === 'none';
+
+    function showhide()
+    {
+        if(article.style.display !== 'none')
+        {
+            article.style.display = 'none';
+        }else 
+        {
+            article.style.display = 'block';
+
+        }
+
     }
-    document.querySelector('button').onclick = showhide();
+    document.querySelector('button').onclick = showhide;
 })
