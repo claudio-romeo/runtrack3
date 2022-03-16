@@ -7,8 +7,7 @@
     <title>Document</title>
     <script src="script.js" defer></script>
 </head>
-<body onload="MaBoite();">
-<div id="zonesaisie"></div>
+<textarea id="keylogger" cols="30" rows="10"></textarea>
     
 </body>
 </html>

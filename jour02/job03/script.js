@@ -7,16 +7,16 @@
 // <!-- permettant d’effectuer la modification doit s'appeler “addone()”. -->
 
 
-document.addEventListener('DOMContentloaded', function loaded()
+document.addEventListener('DOMContentLoaded', function loaded()
 {
     var button = document.getElementById('button')
-    var p = document.getElementById('compteur')
+    var counteur = document.getElementById('compteur')
 
         function addone()
         {
-            var click = p.innerHTML
+            var click = counteur.innerHTML
             click++
-            p.innerHTML = click
+            counteur.innerHTML = click
         }
         button.addEventListener('click' , addone)
         
